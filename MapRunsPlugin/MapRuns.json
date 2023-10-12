@@ -1,0 +1,14 @@
+{
+    "Author": "TL5",
+    "Name": "MapRuns Plugin",
+    "Punchline": "Simple plugin to track the loot/currency gained in a session of opening treasure maps.",
+    "Description": "TODO",
+    "InternalName": "MapRunsPlugin",
+    "ApplicableVersion": "any",
+    "Tags": [
+        "maps",
+        "loot",
+        "track",
+        "runs"
+    ]
+}
