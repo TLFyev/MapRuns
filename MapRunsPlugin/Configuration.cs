@@ -8,6 +8,7 @@ namespace MapRuns
     public class Configuration : IPluginConfiguration
     {
         public int Version { get; set; } = 0;
+        public bool Enabled { get; set; } = true;
         public bool TrackGil { get; set; } = true;
         public bool TrackPoetics { get; set; } = true;
         public bool TrackUncapped { get; set; } = true;

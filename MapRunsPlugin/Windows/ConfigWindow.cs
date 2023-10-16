@@ -10,7 +10,7 @@ public class ConfigWindow : Window, IDisposable
     internal ConfigWindow() : base(
         "MapRuns Settings", ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
     {
-        Size = new Vector2(300, 200);
+        Size = new Vector2(300, 250);
     }
 
     public void Dispose()
