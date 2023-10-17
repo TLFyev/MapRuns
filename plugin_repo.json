@@ -17,9 +17,9 @@
         "LoadSync": false,
         "CanUnloadAsync": false,
         "LoadPriority": 0,
-        "DownloadLinkInstall": "https://github.com/TLFyev/MapRuns/raw/main/latest.zip",
-        "DownloadLinkTesting": "https://github.com/TLFyev/MapRuns/raw/main/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/TLFyev/MapRuns/raw/main/latest.zip",
+        "DownloadLinkInstall": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
+        "DownloadLinkTesting": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
         "Punchline": "Simple plugin to track the loot/currency gained in a session of opening treasure maps.",
         "AcceptsFeedback": false
     }
