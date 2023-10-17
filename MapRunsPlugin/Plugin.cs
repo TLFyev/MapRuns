@@ -28,7 +28,7 @@ namespace MapRuns
         public MapRunLoot? mapRunLoot = null;
 
         private const int MessageTypeGilItemGained = 62;
-        private const int MessageTypeSystem = 57; // "A[n]+<itempayload>+ has been added to the loot list"
+        private const int MessageTypeSystem = 57;
 
         public Plugin(DalamudPluginInterface pluginInterface)
         {
@@ -85,7 +85,6 @@ namespace MapRuns
                     }
                     if (Services.Config.TrackItemsWithRolls && this.mapRunLoot!.tempItems!.Count> 0)
                     {
-                        //we're tracking items with rolls and we're waiting on someone to win an item
                         foreach (var payload in message.Payloads)
                         {
                             switch (payload)
@@ -118,12 +117,10 @@ namespace MapRuns
                                             }
                                             if(this.mapRunLoot!.goodItems!.ContainsKey(iname))
                                             {
-                                                Services.PluginLog.Information("Dict contains item already, adding extra player to end");
                                                 this.mapRunLoot.goodItems[iname] += ", " + pname;
                                             }
                                             else
                                             {
-                                                Services.PluginLog.Information("dict didn't contain item, adding new loot record");
                                                 this.mapRunLoot!.goodItems.Add(iname, pname);
                                             }
                                         }
@@ -141,7 +138,6 @@ namespace MapRuns
                             case TextPayload textPayload:
                                 if (textPayload.Text!.Contains("has been added to the loot list.") && Services.Config.TrackItemsWithRolls)
                                 {
-                                    //indicating we have an item that needs rolling on
                                     var iname = "";
 
                                     foreach (var pl in message.Payloads)
@@ -154,7 +150,6 @@ namespace MapRuns
                                     }
 
                                     this.mapRunLoot!.tempItems!.Add(iname);
-                                    Services.PluginLog.Information("Added: " + iname + " to the tempitems list");
                                     break;
                                 }
                                 break;
@@ -214,7 +209,6 @@ namespace MapRuns
                     if(this.mapRunLoot!.goodItems!.Count > 0)
                     {
                         this.mapRunLoot.Clear();
-                        //TODO: Other currencies/tracked stuff
                         Services.ChatGui.Print("[MapRuns]: Loot items cleared.");
                     }
                     break;
