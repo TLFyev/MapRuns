@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Numerics;
 using Dalamud.Interface.Windowing;
+using Dalamud.Utility;
 using ImGuiNET;
 using Lumina.Excel.GeneratedSheets;
 
@@ -31,7 +32,11 @@ public class MainWindow : Window, IDisposable
             Services.Config.Save();
         }
         var gilCurrent = plugin.mapRunLoot!.gil;
-        ImGui.Text("Current gil earned: " + gilCurrent.ToString("N0"));
+        ImGui.Text("Gil earned: " + this.plugin.mapRunLoot.GetPrettyPrintGil());
+        var chestsCurrent = plugin.mapRunLoot!.chests;
+        ImGui.Text("Chests found: " + this.plugin.mapRunLoot.chests.ToString());
+        var portalsCurrent = plugin.mapRunLoot!.portals;
+        ImGui.Text("Portals found: " + this.plugin.mapRunLoot.portals.ToString());
         var buttonHeld = ImGui.GetIO().KeyCtrl;
         if (!buttonHeld) ImGui.PushStyleVar(ImGuiStyleVar.Alpha, 0.5f);
         if (ImGui.Button("Clear") && buttonHeld)
@@ -63,6 +68,7 @@ public class MainWindow : Window, IDisposable
             if (this.plugin.mapRunLoot.goodItems.Count > 0)
             {
                 var text = "```\n";
+                text += string.Format(this.plugin.mapRunLoot.GetPrettyPrintGil() + "~ gil\n");
                 foreach (var e in this.plugin.mapRunLoot.goodItems)
                 {
                     var count = e.Value.ToString().Split(", ").Count();
@@ -74,6 +80,6 @@ public class MainWindow : Window, IDisposable
             }
         }
         ImGui.SameLine();
-        ImGui.Text("Defaults to Discord ```<text>``` code formatting.");
+        ImGui.Text("(Defaults to Discord ```<text>``` code formatting.)");
     }
 }

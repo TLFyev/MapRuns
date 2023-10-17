@@ -28,7 +28,7 @@ namespace MapRuns
         public MapRunLoot? mapRunLoot = null;
 
         private const int MessageTypeGilItemGained = 62;
-        private const int MessageTypeSystem = 57;
+        private const int MessageTypeSystem = 57; //also for chests and portals
 
         public Plugin(DalamudPluginInterface pluginInterface)
         {
@@ -151,6 +151,14 @@ namespace MapRuns
 
                                     this.mapRunLoot!.tempItems!.Add(iname);
                                     break;
+                                }
+                                if (textPayload.Text!.Contains("You discover a treasure coffer!") && Services.Config.TrackChests)
+                                {
+                                    this.mapRunLoot!.chests += 1;
+                                }
+                                if (textPayload.Text!.Contains("A portal has appeared.") && Services.Config.TrackPortals)
+                                {
+                                    this.mapRunLoot!.portals += 1;
                                 }
                                 break;
                         }

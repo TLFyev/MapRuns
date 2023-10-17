@@ -27,6 +27,18 @@ public class ConfigWindow : Window, IDisposable
             Services.Config.TrackGil = trackGil;
             Services.Config.Save();
         }
+        var trackChests = Services.Config.TrackChests;
+        if (ImGui.Checkbox("Track Chests", ref trackChests))
+        {
+            Services.Config.TrackChests = trackChests;
+            Services.Config.Save();
+        }
+        var trackPortals = Services.Config.TrackPortals;
+        if (ImGui.Checkbox("Track Portals", ref trackPortals))
+        {
+            Services.Config.TrackPortals = trackPortals;
+            Services.Config.Save();
+        }
         ImGui.Separator();
         var trackWithRolls = Services.Config.TrackItemsWithRolls;
         if (ImGui.Checkbox("Track items that require rolls", ref trackWithRolls))

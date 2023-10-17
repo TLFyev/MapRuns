@@ -3,8 +3,8 @@
         "Author": "TL5",
         "Name": "MapRuns Plugin",
         "InternalName": "MapRuns",
-        "AssemblyVersion": "0.0.0.1",
-        "Description": "Simple plugin to track the loot/currency gained in a session of opening treasure maps.",
+        "AssemblyVersion": "0.0.0.2",
+        "Description": "Simple plugin to track the loot + gil gained in a session of opening treasure maps.",
         "ApplicableVersion": "any",
         "Tags": [
             "plugin",
@@ -20,7 +20,7 @@
         "DownloadLinkInstall": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
         "DownloadLinkTesting": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
         "DownloadLinkUpdate": "https://github.com/TLFyev/MapRuns/raw/master/latest.zip",
-        "Punchline": "Simple plugin to track the loot/currency gained in a session of opening treasure maps.",
+        "Punchline": "Simple plugin to track the loot + gil gained in a session of opening treasure maps.",
         "AcceptsFeedback": false
     }
 ]
