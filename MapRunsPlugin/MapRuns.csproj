@@ -5,8 +5,8 @@
   <PropertyGroup>
     <Authors></Authors>
     <Company></Company>
-    <Version>0.0.0.2</Version>
-    <Description>MapRuns Plugin.</Description>
+    <Version>0.0.0.3</Version>
+    <Description>MapRuns Plugin</Description>
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/TLFyev/MapRuns</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>

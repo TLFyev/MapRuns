@@ -68,10 +68,12 @@ public class MainWindow : Window, IDisposable
             if (this.plugin.mapRunLoot.goodItems.Count > 0)
             {
                 var text = "```\n";
-                text += string.Format(this.plugin.mapRunLoot.GetPrettyPrintGil() + "~ gil\n");
+                text += string.Format("{0}~ gil\n", this.plugin.mapRunLoot.GetPrettyPrintGil());
+                text += string.Format("{0} chests opened.\n", this.plugin.mapRunLoot.chests.ToString());
+                text += string.Format("{0} portals found.\n", this.plugin.mapRunLoot.portals.ToString());
                 foreach (var e in this.plugin.mapRunLoot.goodItems)
                 {
-                    var count = e.Value.ToString().Split(", ").Count();
+                    var count = e.Value.ToString().Split(", ").Length;
                     text += string.Format("{0}x {1} - {2}\n", count, e.Key, e.Value);
                 }
                 text += "```";
