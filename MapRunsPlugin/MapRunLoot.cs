@@ -27,5 +27,16 @@ namespace MapRuns
             this.goodItems = new Dictionary<string, string>();
             this.commonItems = new Dictionary<string, string>();
         }
+
+        public void Clear()
+        {
+            this.gil = 0;
+            this.poetics = 0;
+            this.uncapped = 0;
+            this.capped = 0;
+            this.tempItems = new List<string>();
+            this.goodItems = new Dictionary<string, string>();
+            this.commonItems = new Dictionary<string, string>();
+        }
     }
 }

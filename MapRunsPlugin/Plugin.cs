@@ -50,12 +50,6 @@ namespace MapRuns
 
             this.mapRunLoot = new MapRunLoot();
 
-            //test values uwu
-            this.mapRunLoot.goodItems.Add("Pixie Wings", "The'letr Fyev, Ray Park");
-            this.mapRunLoot.goodItems.Add("Exciting Leather", "Ray Park");
-            this.mapRunLoot.goodItems.Add("Malake Karpasos", "Ray Park, Lilah Rae");
-            this.mapRunLoot.goodItems.Add("Exciting Fiber", "The'letr Fyev");
-
             Services.PluginInterface.UiBuilder.Draw += DrawUI;
             Services.PluginInterface.UiBuilder.OpenConfigUi += DrawConfigUI;
 
@@ -219,8 +213,7 @@ namespace MapRuns
                 case "clear":
                     if(this.mapRunLoot!.goodItems!.Count > 0)
                     {
-                        this.mapRunLoot.goodItems.Clear();
-                        this.mapRunLoot.gil = 0;
+                        this.mapRunLoot.Clear();
                         //TODO: Other currencies/tracked stuff
                         Services.ChatGui.Print("[MapRuns]: Loot items cleared.");
                     }
