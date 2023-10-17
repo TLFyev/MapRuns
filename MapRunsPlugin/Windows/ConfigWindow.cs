@@ -27,24 +27,6 @@ public class ConfigWindow : Window, IDisposable
             Services.Config.TrackGil = trackGil;
             Services.Config.Save();
         }
-        var trackPoetics = Services.Config.TrackPoetics;
-        if (ImGui.Checkbox("Track Poetics", ref trackPoetics))
-        {
-            Services.Config.TrackPoetics = trackPoetics;
-            Services.Config.Save();
-        }
-        var trackUncapped = Services.Config.TrackUncapped;
-        if (ImGui.Checkbox("Track Uncapped Tomestones", ref trackUncapped))
-        {
-            Services.Config.TrackUncapped = trackUncapped;
-            Services.Config.Save();
-        }
-        var trackCapped = Services.Config.TrackCapped;
-        if (ImGui.Checkbox("Track Capped Tomestones", ref trackCapped))
-        {
-            Services.Config.TrackCapped = trackCapped;
-            Services.Config.Save();
-        }
         ImGui.Separator();
         var trackWithRolls = Services.Config.TrackItemsWithRolls;
         if (ImGui.Checkbox("Track items that require rolls", ref trackWithRolls))

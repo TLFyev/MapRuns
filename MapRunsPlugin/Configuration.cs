@@ -10,9 +10,6 @@ namespace MapRuns
         public int Version { get; set; } = 0;
         public bool Enabled { get; set; } = true;
         public bool TrackGil { get; set; } = true;
-        public bool TrackPoetics { get; set; } = true;
-        public bool TrackUncapped { get; set; } = true;
-        public bool TrackCapped { get; set; } = true;
         public bool TrackItemsWithRolls { get; set; } = true;
         public bool TrackItemsWithoutRolls { get; set; } = false;
 

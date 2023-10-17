@@ -73,5 +73,7 @@ public class MainWindow : Window, IDisposable
                 Services.ChatGui.Print("[MapRuns]: Loot copied to clipboard.");
             }
         }
+        ImGui.SameLine();
+        ImGui.Text("Defaults to Discord ```<text>``` code formatting.");
     }
 }
