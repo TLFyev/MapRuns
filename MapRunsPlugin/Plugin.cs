@@ -119,7 +119,7 @@ namespace MapRuns
                                             {
                                                 this.mapRunLoot!.goodItems![iname] += ", " + pname;
                                             }
-                                            else
+                                            if(!this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
                                             {
                                                 this.mapRunLoot!.goodItems!.Add(iname, pname);
                                             }

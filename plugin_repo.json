@@ -3,7 +3,7 @@
         "Author": "TL5",
         "Name": "MapRuns Plugin",
         "InternalName": "MapRuns",
-        "AssemblyVersion": "0.0.0.6",
+        "AssemblyVersion": "0.0.0.7",
         "Description": "Simple plugin to track the loot + gil gained in a session of opening treasure maps.",
         "ApplicableVersion": "any",
         "Tags": [
