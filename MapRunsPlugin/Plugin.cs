@@ -115,9 +115,9 @@ namespace MapRuns
                                                     pname = Services.ClientState.LocalPlayer!.Name.ToString();
                                                 }
                                             }
-                                            if(this.mapRunLoot!.goodItems!.ContainsKey(iname))
+                                            if(this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
                                             {
-                                                this.mapRunLoot.goodItems[iname] += ", " + pname;
+                                                this.mapRunLoot!.goodItems![iname] += ", " + pname;
                                             }
                                             else
                                             {

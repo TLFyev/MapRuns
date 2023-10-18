@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Authors></Authors>
     <Company></Company>
-    <Version>0.0.0.5</Version>
+    <Version>0.0.0.6</Version>
     <Description>MapRuns Plugin</Description>
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/TLFyev/MapRuns</PackageProjectUrl>
