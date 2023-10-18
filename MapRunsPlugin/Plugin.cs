@@ -121,7 +121,7 @@ namespace MapRuns
                                             }
                                             else
                                             {
-                                                this.mapRunLoot!.goodItems.Add(iname, pname);
+                                                this.mapRunLoot!.commonItems!.Add(iname, pname);
                                             }
                                         }
                                     }
