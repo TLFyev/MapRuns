@@ -121,7 +121,7 @@ namespace MapRuns
                                             }
                                             else
                                             {
-                                                this.mapRunLoot!.commonItems!.Add(iname, pname);
+                                                this.mapRunLoot!.goodItems!.Add(iname, pname);
                                             }
                                         }
                                     }
@@ -149,7 +149,8 @@ namespace MapRuns
                                         }
                                     }
 
-                                    this.mapRunLoot!.tempItems!.Add(iname);
+                                    if (iname != "") this.mapRunLoot!.tempItems!.Add(iname);
+                                    Services.PluginLog.Information(iname + " - item name");
                                     break;
                                 }
                                 if (textPayload.Text!.Contains("You discover a treasure coffer!") && Services.Config.TrackChests)
