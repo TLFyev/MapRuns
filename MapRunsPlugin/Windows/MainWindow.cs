@@ -43,7 +43,7 @@ public class MainWindow : Window, IDisposable
         {
             if (this.plugin.mapRunLoot.goodItems!.Count > 0)
             {
-                this.plugin.mapRunLoot.Clear();
+                this.plugin.mapRunLoot.ClearAll();
             }
         }
         if (!buttonHeld) ImGui.PopStyleVar();

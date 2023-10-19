@@ -33,7 +33,7 @@ namespace MapRuns
             this.commonItems = new Dictionary<string, string>();
         }
 
-        public void Clear()
+        public void ClearAll()
         {
             this.gil = 0;
             this.chests = 0;

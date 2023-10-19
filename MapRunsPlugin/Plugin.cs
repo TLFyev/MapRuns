@@ -217,7 +217,7 @@ namespace MapRuns
                 case "clear":
                     if(this.mapRunLoot!.goodItems!.Count > 0)
                     {
-                        this.mapRunLoot.Clear();
+                        this.mapRunLoot.ClearAll();
                         Services.ChatGui.Print("[MapRuns]: Loot items cleared.");
                     }
                     break;
