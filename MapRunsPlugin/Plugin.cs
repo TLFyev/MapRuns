@@ -115,11 +115,11 @@ namespace MapRuns
                                                     pname = Services.ClientState.LocalPlayer!.Name.ToString();
                                                 }
                                             }
-                                            if(this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
+                                            if(this.mapRunLoot.tempItems.Contains(iname) && this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
                                             {
                                                 this.mapRunLoot!.goodItems![iname] += ", " + pname;
                                             }
-                                            if(!this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
+                                            if(this.mapRunLoot.tempItems.Contains(iname) && !this.mapRunLoot!.goodItems!.ContainsKey(iname.ToString()))
                                             {
                                                 this.mapRunLoot!.goodItems!.Add(iname, pname);
                                             }
@@ -149,7 +149,7 @@ namespace MapRuns
                                         }
                                     }
 
-                                    if (iname != "") this.mapRunLoot!.tempItems!.Add(iname);
+                                    if (iname != "") this.mapRunLoot!.tempItems!.Add(iname.ToString());
                                     Services.PluginLog.Information(iname + " - item name");
                                     break;
                                 }
