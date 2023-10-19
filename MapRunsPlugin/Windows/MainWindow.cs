@@ -41,10 +41,7 @@ public class MainWindow : Window, IDisposable
         if (!buttonHeld) ImGui.PushStyleVar(ImGuiStyleVar.Alpha, 0.5f);
         if (ImGui.Button("Clear") && buttonHeld)
         {
-            if (this.plugin.mapRunLoot.goodItems!.Count > 0)
-            {
-                this.plugin.mapRunLoot.ClearAll();
-            }
+            this.plugin.mapRunLoot.ClearAll();
         }
         if (!buttonHeld) ImGui.PopStyleVar();
         ImGui.SameLine(); ImGui.Text("(Hold CTRL to clear items.)");
