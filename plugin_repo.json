@@ -3,7 +3,7 @@
         "Author": "TL5",
         "Name": "MapRuns Plugin",
         "InternalName": "MapRuns",
-        "AssemblyVersion": "0.0.1.2",
+        "AssemblyVersion": "0.0.1.3",
         "Description": "Simple plugin to track the loot + gil gained in a session of opening treasure maps.",
         "ApplicableVersion": "any",
         "Tags": [
@@ -12,7 +12,7 @@
             "sound",
             "spam"
         ],
-        "DalamudApiLevel": 9,
+        "DalamudApiLevel": 10,
         "LoadRequiredState": 0,
         "LoadSync": false,
         "CanUnloadAsync": false,
