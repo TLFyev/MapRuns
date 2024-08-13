@@ -30,7 +30,7 @@ namespace MapRuns
         private const int MessageTypeGilItemGained = 62;
         private const int MessageTypeSystem = 57; //also for chests and portals
 
-        public Plugin(DalamudPluginInterface pluginInterface)
+        public Plugin(IDalamudPluginInterface pluginInterface)
         {
             pluginInterface.Create<Services>();
             Services.PluginLog.Information("loading?");
@@ -56,7 +56,7 @@ namespace MapRuns
             Services.ChatGui.ChatMessage += ChatMessage;
         }
 
-        private void ChatMessage(XivChatType type, uint senderId, ref SeString sender, ref SeString message, ref bool isHandled)
+        private void ChatMessage(XivChatType type, int timestamp, ref SeString sender, ref SeString message, ref bool isHandled)
         {
             if (!Services.Config.Enabled) return;
             var realtype = (int)type & 0x7F;
